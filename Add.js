@@ -11,14 +11,13 @@ function addRecord() {
     function confirmAdd() {
         let newRecords = records;
         newRecords.push(
-        {"NI Number" : document.getElementById("addNI").value, 
-        "Full Name" : document.getElementById("addName").value,
-        "Phone Number" : document.getElementById("addPhone").value,
-        "Address" : document.getElementById("addAdd").value,
-        "Department" : document.getElementById("addDep").value}
+        {"ninumber" : document.getElementById("addNI").value, 
+        "fullname" : document.getElementById("addName").value,
+        "phone" : document.getElementById("addPhone").value,
+        "address" : document.getElementById("addAdd").value,
+        "department" : document.getElementById("addDep").value}
         );
         
         makeTable(newRecords);
-        console.log(newRecords);
         
         }  
