@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="styling.css">
+    
+</head>
+<body onload="makeTable(records)">
+
+
+<h1 style="text-align: center;"> Employee database </h1>
+<hr>
+<br>
+
+<select id="departments" onchange="if(this.selectedIndex) filterByDpt()">
+    <option value="Select">Select Department</option>
+    <option value="All">All</option>
+    <option value="IT">IT</option>
+    <option value="Sales">Sales</option>
+    <option value="HR">HR</option>
+  </select>
+
+<input type="button" value="Add Employee Details" name="addEmp" onclick='addRecord()'>
+
+
+<table class="tg" id="showData"></table>   
+
+<br>
+
+<input type="text" id="addNI" placeholder="NI Number" style="visibility: hidden;">
+<input type="text" id="addName" placeholder="Full Name" style="visibility: hidden;">
+<input type="text" id="addPhone" placeholder="Phone Number" style="visibility: hidden;">
+<input type="text" id="addAdd" placeholder="Address" style="visibility: hidden;">
+<input type="text" id="addDep" placeholder="Department" style="visibility: hidden;">
+<input type="button" id="addRec" value="Add Record1" style="visibility: hidden;" onclick="confirmAdd()">
+ 
+<script src="makeTable.js"></script>
+<script src="Functionality.js"></script>  
+<script src="Records.js"></script>
+<script src="addition.js"></script>
+
+</body>
+</html>
