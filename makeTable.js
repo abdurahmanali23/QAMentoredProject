@@ -1,5 +1,8 @@
-
+let tickBox = "";
+let table = document.createElement("table");
+var k=0;
 function makeTable(sorteddepartment){
+    // EXTRACT VALUE FOR HTML HEADER.
     let col = [];
     for (let i = 0; i < sorteddepartment.length; i++) {
         for (let key in sorteddepartment[i]) {
@@ -9,7 +12,7 @@ function makeTable(sorteddepartment){
         }
     }
     
-    let table = document.createElement("table");
+
     
     let tr = table.insertRow(-1);                   
     
@@ -27,6 +30,11 @@ function makeTable(sorteddepartment){
             let tabCell = tr.insertCell(-1);
             tabCell.innerHTML = sorteddepartment[i][col[j]];
         }
+    tickBox = document.createElement("INPUT");
+    tickBox.type="checkbox";
+    let tabCell = tr.insertCell(-1);
+    tabCell.appendChild(tickBox);
+
     }
     
     let divContainer = document.getElementById("showData");
