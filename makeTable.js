@@ -1,6 +1,4 @@
-let tickBox = "";
-let table = document.createElement("table");
-var k=0;
+
 function makeTable(sorteddepartment){
     // EXTRACT VALUE FOR HTML HEADER.
     let col = [];
@@ -12,7 +10,7 @@ function makeTable(sorteddepartment){
         }
     }
     
-
+    let table = document.createElement("table");
     
     let tr = table.insertRow(-1);                   
     
@@ -30,10 +28,12 @@ function makeTable(sorteddepartment){
             let tabCell = tr.insertCell(-1);
             tabCell.innerHTML = sorteddepartment[i][col[j]];
         }
-    tickBox = document.createElement("INPUT");
-    tickBox.type="checkbox";
+    deletebutton = document.createElement("button");
+    deletebutton.innerHTML="delete";
+    deletebutton.id = i;
+    deletebutton.onclick=()=> deleteRecord(i);
     let tabCell = tr.insertCell(-1);
-    tabCell.appendChild(tickBox);
+    tabCell.appendChild(deletebutton);
 
     }
     
