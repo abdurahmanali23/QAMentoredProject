@@ -35,6 +35,16 @@ function makeTable(sorteddepartment){
     let tabCell = tr.insertCell(-1);
     tabCell.appendChild(deletebutton);
 
+    editButton = document.createElement("input");
+
+editButton.type="button";
+editButton.id = i;
+editButton.className = "delete";
+editButton.value = "Edit";
+editButton.style.visibility="visible";
+editButton.onclick=()=> editRecord(i);
+tabCell.appendChild(editButton);
+
     }
     
     let divContainer = document.getElementById("showData");
